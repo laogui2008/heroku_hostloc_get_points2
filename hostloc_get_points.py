@@ -278,7 +278,7 @@ def send_message_to_tg(text: str, retry_count: int = 2):
 
     try:
         text = parse.quote(text)
-        post_url = 'https://api.telegram.org/{}/sendMessage?parse_mode=MarkdownV2&chat_id={}&text={}'.format(
+        post_url = 'https://api.telegram.org/bot{}/sendMessage?parse_mode=MarkdownV2&chat_id={}&text={}'.format(
             tg_bot_token, tg_chat_id, text)
         requests.get(post_url, headers=base_headers, proxies=proxies)
     except:
