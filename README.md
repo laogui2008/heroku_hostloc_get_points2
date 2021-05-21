@@ -1,6 +1,7 @@
 # heroku_hostloc_get_points
 利用heroku，登录hostloc，访问用户空间，获取积分  
-签到成功，将积分、威望、金钱等数据发送到TG
+签到成功，将积分、威望、金钱等数据发送到TG  
+原项目代码：[https://git.inkuang.com/inkuang/hostloc-auto-get-points](https://git.inkuang.com/inkuang/hostloc-auto-get-points)  
 
 
 #### 注意
