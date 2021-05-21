@@ -21,12 +21,12 @@
 3. heroku操作说明 (本人使用环境是Windows 10)
     a. 注册[heroku账号](https://www.heroku.com/)
     b. 安装[Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-    c. 打开cmd，在浏览器heroku账号已登录的情况下，可直接运行命令：heroku login，在浏览器上进行授权登录；在浏览器heroku账号未登录的情况下，直接运行命令：heroku login -i，根据提示，输入账号和密码登录
-    ![heroku login](/static/1.png)
-    d. 修改代码中变量send_points_to_tg_flag的值，设置是否发送消息到TG
-    ![send_points_to_tg_flag](/static/3.png)
-    e. 修改函数main()上注解的值，设置定时任务运行时间(以服务器所在时区为准)，以下例子是每天9：48分运行
-    ![main()](/static/2.png)
+    c. 打开cmd，在浏览器heroku账号已登录的情况下，可直接运行命令：heroku login，在浏览器上进行授权登录；在浏览器heroku账号未登录的情况下，直接运行命令：heroku login -i，根据提示，输入账号和密码登录  
+    ![heroku login](/static/1.png)  
+    d. 修改代码中变量send_points_to_tg_flag的值，设置是否发送消息到TG  
+    ![send_points_to_tg_flag](/static/3.png)  
+    e. 修改函数main()上注解的值，设置定时任务运行时间(以服务器所在时区为准)，以下例子是每天9：48分运行  
+    ![main()](/static/2.png)  
     f. 创建heroku应用
 
         cd heroku_hostloc_get_points2
@@ -38,19 +38,19 @@
         git commit -m "init"
         git push heroku main
 
-    h. 设置环境变量
+    h. 设置环境变量  
 
         heroku config:set HOSTLOC_USERNAME="user1" HOSTLOC_PASSWORD="pass1" --app=hostloc-get-points2    # 设置hostloc的账号密码，如果有多个，用英文逗号,进行分隔
         heroku config:set TG_CHAT_ID="xxxxx" TG_BOT_TOKEN="xxxxxxxxxxxxxxx" --app=hostloc-get-points2    # 设置TG的chat_id和机器人的token，如果不需要发送TG消息，可不用设置
 
-    i. 为heroku应用分配资源，运行项目
+    i. 为heroku应用分配资源，运行项目  
 
         heroku ps:scale clock=1 --app=hostloc-get-points2 # 分配资源，项目启动    为什么是clock？请看Procfile文件
         heroku ps:scale clock=0 --app=hostloc-get-points2 # 取消资源分配
 
-    j. 查看日志
-    ![log](/static/4.png)
-    ![log](/static/5.png)
-    k. TG上的信息
+    j. 查看日志  
+    ![log](/static/4.png)  
+    ![log](/static/5.png)  
+    k. TG上的信息  
     ![log](/static/6.png)
 
