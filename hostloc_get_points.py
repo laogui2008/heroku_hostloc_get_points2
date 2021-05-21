@@ -289,7 +289,7 @@ def send_message_to_tg(text: str, retry_count: int = 2):
             send_message_to_tg(text, retry_count - 1)
 
 
-@sched.scheduled_job('cron', hour=20, minute=35)
+@sched.scheduled_job('cron', hour=9, minute=15)
 def main():
     username = os.environ["HOSTLOC_USERNAME"]
     password = os.environ["HOSTLOC_PASSWORD"]
