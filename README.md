@@ -53,5 +53,22 @@
     ![log](/static/4.png)  
     ![log](/static/5.png)  
     k. TG上的信息  
-    ![log](/static/6.png)
+    ![log](/static/6.png)  
+
+4. 在上述步骤创建应用运行后，如果本地有修改，如修改定时任务运行时间，需要将修改的代码push到heroku  
+    参考：[Heroku Push local changes](https://devcenter.heroku.com/articles/getting-started-with-python#push-local-changes)  
+    
+        git add .  
+        git commit -m "update"  
+        git push heroku main  
+
+5. **设置定时任务时间前，先登录heroku服务器，查看当前服务器时间**  
+    
+        # 用heroku cli登录后，执行下面命令，查看服务时间  
+        # hostloc-get-points2是应用名，替换成自己的，可用heroku apps查看所有应用  
+        heroku run bash --app=hostloc-get-points2  
+        date -R  
+        exit    #查看完后记得退出  
+
+    ![heroku run bash --app=hostloc-get-points2](/static/7.png)  
 
