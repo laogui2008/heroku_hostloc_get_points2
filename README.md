@@ -4,6 +4,13 @@
 原项目代码：[https://git.inkuang.com/inkuang/hostloc-auto-get-points](https://git.inkuang.com/inkuang/hostloc-auto-get-points)  
 
 
+#### 更新说明  
+2021-06-15  
+定时任务增加misfire_grace_time参数解决Run time of job...next run at...was missed by问题    
+参考：[Missed job executions and coalescing](https://apscheduler.readthedocs.io/en/3.0/userguide.html#missed-job-executions-and-coalescing)  
+
+
+
 #### 注意
 1. 适合有编程基础和对heroku cli操作比较了解的人使用  
 2. heroku免费时长为550小时(**运行该脚本可能会用完该免费时长**)，添加信用卡认证后可增加450小时，总共1000小时  
